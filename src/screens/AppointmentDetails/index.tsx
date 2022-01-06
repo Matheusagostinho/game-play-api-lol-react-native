@@ -17,8 +17,7 @@ import {
 import BannerImg from '../../assets/banner.png';
 
 import { styles } from './styles';
-import { theme } from '../../global/styles/theme';
-import { api } from '../../services/api';
+
 
 import { AppointmentProps } from '../../components/Appointment';
 import { ListDivider } from '../../components/ListDivider';
@@ -41,22 +40,27 @@ type GuildWidget = {
 }
 
 export function AppointmentDetails(){
-  const [widget, setWidget] = useState<GuildWidget>({} as GuildWidget);
+  const widget={
+    members:[{
+      id: '001',
+      username: 'Matheus Agostinho',
+      avatar_url: 'https://avatars.githubusercontent.com/u/54296216?s=96&v=4',
+      status: 'ativo'
+    },
+    {
+      id: '002',
+      username: 'Luciano Soares',
+      avatar_url: 'https://media-exp1.licdn.com/dms/image/C4D03AQFtdn7-FbNH2Q/profile-displayphoto-shrink_200_200/0/1593109476085?e=1646870400&v=beta&t=c1Cl-fb42kfbFILrwgUVKnK3WCVpCM6Ma4DZtSsI6HE',
+      status: 'ativo'
+    }],
+    instant_invite :'aa'
+  }
   const [loading, setLoading] = useState(true);
 
   const route = useRoute();
   const { guildSelected } = route.params as Params;
 
-  async function fetchGuildWidget() {
-    try {
-      const response = await api.get(`/guilds/${guildSelected.guild.id}/widget.json`);
-      setWidget(response.data);      
-    } catch {
-      Alert.alert('Verifique as configurações do servidor. Será que o Widget está habilitado?');      
-    } finally {
-      setLoading(false);
-    }
-  }
+ 
 
   function handleShareInvitation() {
     const message = Platform.OS === 'ios' 
@@ -73,23 +77,12 @@ export function AppointmentDetails(){
     Linking.openURL(widget.instant_invite);
   }
 
-  useEffect(() => {
-    fetchGuildWidget();
-  },[]);
   return (
     <Background>
       <Header 
         title="Detalhes"
-        action={
-          guildSelected.guild.owner &&
-          <BorderlessButton onPress={handleShareInvitation}>
-            <Fontisto 
-              name="share"
-              size={24}
-              color={theme.colors.primary}
-            />
-          </BorderlessButton>
-        }
+        
+        
       />
 
       <ImageBackground 
@@ -108,7 +101,7 @@ export function AppointmentDetails(){
       </ImageBackground>
 
       {
-        loading ? <Load /> :
+        false  ? <Load /> :
         <>
           <ListHeader 
             title="Jogadores"

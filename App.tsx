@@ -7,7 +7,7 @@ import { useFonts } from 'expo-font';
 
 LogBox.ignoreLogs(['You are not currently signed in to Expo on your development machine.']);
 
-import { AuthProvider } from './src/hooks/auth';
+
 
 import { Routes } from './src/routes';
 import { Background } from './src/components/Background';
@@ -31,9 +31,9 @@ export default function App(){
         backgroundColor="transparent"
         translucent
       />
-      <AuthProvider>
+     
         <Routes />
-      </AuthProvider>
+      
     </Background>
   );
 }

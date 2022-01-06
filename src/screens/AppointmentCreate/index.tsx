@@ -104,31 +104,7 @@ export function AppointmentCreate(){
           />
 
           <View style={styles.form}>
-            <RectButton onPress={handleOpenGuilds}>
-              <View style={styles.select}>
-                {
-                  guild.icon 
-                  ? <GuildIcon guildId={guild.id} iconId={guild.icon} /> 
-                  : <View style={styles.image} />
-                }
-
-                <View style={styles.selectBody}>
-                  <Text style={styles.label}>
-                    { 
-                      guild.name 
-                      ? guild.name 
-                      : 'Selecione um servidor' 
-                    }
-                  </Text>
-                </View>
-
-                <Feather 
-                  name="chevron-right"
-                  color={theme.colors.heading}
-                  size={18}
-                />
-              </View>
-            </RectButton>
+            
             
             <View style={styles.field}>
               <View>

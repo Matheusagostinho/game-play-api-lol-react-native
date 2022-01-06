@@ -13,10 +13,10 @@ export function ListDivider({ isCentered }: Props){
       style={[
         styles.container,
         isCentered ? {
-          marginVertical: 12,
+          marginVertical: 20,
         } : {
-          marginTop: 2,
-          marginBottom: 31,
+          marginTop: 20,
+          marginBottom: 20,
         }
       ]}
     />

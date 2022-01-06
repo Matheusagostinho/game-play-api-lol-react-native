@@ -4,8 +4,8 @@ import { theme } from '../../global/styles/theme';
 export const styles = StyleSheet.create({
   container: {
     height: 1,
-    width: '78%',
-    alignSelf: 'flex-end',
+    width: '100%',
+   
     backgroundColor: theme.colors.secondary40,    
   }
 });

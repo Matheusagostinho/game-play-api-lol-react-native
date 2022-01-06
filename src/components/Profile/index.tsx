@@ -1,15 +1,20 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, Alert } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
-
-import { useAuth } from '../../hooks/auth';
-
 import { Avatar } from '../Avatar';
+
+
+
 import { styles } from './styles';
 
 export function Profile() {
-  const { user, singOut } = useAuth();
 
+  const navigation = useNavigation();
+  const user = {
+    avatar:"https://avatars.githubusercontent.com/u/54296216?s=96&v=4",
+    firstName: "Matheus Agostinho"
+  }
   function handleSignOut() {
     Alert.alert('Logout', 'Deseja sair do GamePlay?',
     [
@@ -19,7 +24,7 @@ export function Profile() {
       },
       {
         text: 'Sim',
-        onPress: () => singOut()
+        onPress: () =>  navigation.navigate('SignIn')
       }
     ])
   }
@@ -43,7 +48,7 @@ export function Profile() {
         </View>
 
         <Text style={styles.message}>
-          Hoje é dia de vitória
+          Hoje é dia treinar
         </Text>
       </View>
 
