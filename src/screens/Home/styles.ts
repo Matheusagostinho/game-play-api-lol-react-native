@@ -15,9 +15,11 @@ export const styles = StyleSheet.create({
   },
   matches: {    
     marginTop: 24,
+    paddingTop: 24,
     marginLeft: 24,
     marginRight: 24,
   },
+
   bottom:{
     width: '100%',
     paddingHorizontal: 24,

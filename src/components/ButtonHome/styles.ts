@@ -3,8 +3,11 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
-    minHeight: 120,
-    maxHeight: 120,
-    paddingLeft: 24,
+    height: 48,
+    width: 48,
+    backgroundColor: theme.colors.primary,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 });

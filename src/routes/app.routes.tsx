@@ -4,10 +4,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { theme } from '../global/styles/theme';
 
 import { Home } from '../screens/Home';
-import { AppointmentDetails } from '../screens/AppointmentDetails';
-import { AppointmentCreate } from '../screens/AppointmentCreate';
-import { Appointments } from '../screens/Appointments';
+import { ChampionDetails } from '../screens/ChampionDetails';
+
 import { SignIn } from '../screens/SignIn';
+import { Favorites } from '../screens/Favorites';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -30,19 +30,17 @@ export function AppRoutes() {
         name="Home"
         component={Home}
       />
-       <Screen 
-        name="Appointments"
-        component={Appointments}
-      />
+      
      
       <Screen 
-        name="AppointmentDetails"
-        component={AppointmentDetails}
+        name="ChampionDetails"
+        component={ChampionDetails}
       />
-      <Screen 
-        name="AppointmentCreate"
-        component={AppointmentCreate}
-      />      
+        <Screen 
+        name="ChampionFavorites"
+        component={Favorites}
+      />
+         
     </Navigator>
   )
 }

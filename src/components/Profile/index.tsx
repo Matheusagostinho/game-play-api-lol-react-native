@@ -48,7 +48,7 @@ export function Profile() {
         </View>
 
         <Text style={styles.message}>
-          Hoje é dia treinar
+          Seu Campeão favorito é o Draven
         </Text>
       </View>
 

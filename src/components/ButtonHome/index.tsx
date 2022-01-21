@@ -1,19 +1,18 @@
 import React from 'react';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
-import { AntDesign } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
 
 import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
 
-export function ButtonAdd({...rest}: RectButtonProps) {
+export function ButtonHome({...rest}: RectButtonProps) {
   const {heading } = theme.colors;
   return (
     <RectButton 
       style={styles.container}
       {...rest}
     >
-      <AntDesign  
-          name="heart"
+     <Entypo name="home"
           size={24}
           color={heading}
         />

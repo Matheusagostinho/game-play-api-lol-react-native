@@ -38,14 +38,14 @@ export function SignIn(){
 
         <View style={styles.content}>
           <Text style={styles.title}>
-            Conecte-se {'\n'}
-            e organize seus {'\n'} 
-            jogos
+           Informações {'\n'}
+           de todos os {'\n'} 
+           Campeões
           </Text>
 
           <Text style={styles.subtitle}>
-            Agenda para seus treinos{'\n'} 
-            favoritos com seus amigos
+           Seu Campeão{'\n'} 
+            na palma da suas mãos
           </Text>
 
           {

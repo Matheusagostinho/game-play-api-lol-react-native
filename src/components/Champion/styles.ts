@@ -2,11 +2,20 @@ import { StyleSheet } from 'react-native';
 import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
-  container: {
-    width: '100%',
+  container:{
+    alignItems:"center",
+    flexDirection:'row',
+    paddingHorizontal: 24, 
+  },
+  
+  containerItens: {
+    width:"100%",
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 24,    
+    flex:1 ,
+  },
+  bottomLike:{
+
   },
   content: {
     flex: 1,
@@ -17,11 +26,20 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.title700,
     color: theme.colors.heading,
     fontSize: 18,
-    marginBottom: 4,
+    marginBottom: 2,
   },
-  type: {
+  subtitle: {
     fontFamily: theme.fonts.text400,
     color: theme.colors.highlight,
     fontSize: 13,
+  },
+  
+  image:{
+    height: 60,
+    width: 60,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    
   }
 });

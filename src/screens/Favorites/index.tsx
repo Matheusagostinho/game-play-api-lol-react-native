@@ -13,54 +13,40 @@ import api from '../../services/api';
 import { Champion, ChampionProps } from '../../components/Champion';
 import { Load } from '../../components/Load';
 import { ButtonAdd } from '../../components/ButtonAdd';
+import { ButtonHome } from '../../components/ButtonHome';
 import { loadFavorites } from '../../utils/ChampsIsFavorited';
 
+import { COLLECTION_FAVORITES } from '../../configs/database';
 
 
 
-
-export function Home() {
+export function Favorites() {
   const [champions, setChampions] = useState([]  as ChampionProps[]);
   const [loading, setLoading] = useState(true);
 
 
   const navigation = useNavigation();
-  
+
  
 
   useEffect(() => {
     async function fetchChampions() {
-      const response = await api.get(`champion.json`)
-      const data = response.data.data
-      const champStored =  await loadFavorites() 
-      const champ = Object.keys(data).map((key) => data[key]);
-      const champions = champ.map((champion) => {
-        const item =  champStored.find(i => i.id ===  champion.id) 
-        
-      
-        return{
-          ...champion,
-          alreadyFavorited: item?.id ===  champion.id ? true : false
-      
-      }
-      
-      })
-    
-     
+      const storage =  await loadFavorites() 
+      const champions = storage.filter((champion) => champion.alreadyFavorited)
+
       setChampions(champions)
       setLoading(false)
     }
-
     fetchChampions()
    
   }, [champions])
+
   useFocusEffect(useCallback(() => {
     loadFavorites();
   },[champions]));
 
-
-  function handleChampionFavorites() {
-    navigation.navigate('ChampionFavorites');
+  function handleHome() {
+    navigation.navigate('Home');
   } 
  function handleChampionDetails(champSelected: ChampionProps) {
   navigation.navigate('ChampionDetails', { champSelected });
@@ -70,11 +56,11 @@ export function Home() {
     <Background>
       <View style={styles.header}>
         <Profile />
-        <ButtonAdd onPress={handleChampionFavorites}/>
+        <ButtonHome onPress={handleHome}/>
       </View>
 
       <ListHeader 
-          title="Campeões"
+          title="Favoritos"
           subtitle={`Total ${champions.length}`}
          
         />  

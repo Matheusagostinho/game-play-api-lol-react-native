@@ -1,9 +1,9 @@
-const DATABASE_NAME = '@gameplay';
+const DATABASE_NAME = '@infoChampions';
 
 const COLLECTION_USERS = `${DATABASE_NAME}:user`;
-const COLLECTION_APPOINTMENTS = `${DATABASE_NAME}:appointments`;
+const COLLECTION_FAVORITES= `${DATABASE_NAME}:favorites`;
 
 export {
   COLLECTION_USERS,
-  COLLECTION_APPOINTMENTS
+  COLLECTION_FAVORITES
 }

@@ -1,6 +1,0 @@
-export const games = [
-  { id: '1', title: 'League of Legends', image: "https://steamuserimages-a.akamaihd.net/ugc/957483070093055113/DABA77BF74CE845A1F1DA8A3A1ABA5FA54479C9A/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" },
-  { id: '2', title: 'Cs: GO', image: "https://midias.jb.com.br/_midias/jpg/2021/03/11/csgo-586394.jpg" },
-  { id: '3', title: 'World of Warcraft', image: "https://s2.glbimg.com/WQ8l23q-ZHrldVp5Wh4Uvjen_sM=/0x0:1067x600/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2017/Z/W/TVAKmyRdOW9BpJk3Grqw/world-of-warcraft-1.jpg" },
-  { id: '4', title: 'Perfect World', image: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25b6b683-751b-4d43-b30d-83876e9720ea/dchv9pa-1ead053e-df31-4673-b3ec-eade34dd4543.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI1YjZiNjgzLTc1MWItNGQ0My1iMzBkLTgzODc2ZTk3MjBlYVwvZGNodjlwYS0xZWFkMDUzZS1kZjMxLTQ2NzMtYjNlYy1lYWRlMzRkZDQ1NDMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rdB0IznNXKvGXoADQ0rLTD3rFVitfkvG442IoeHtZVg" },
-]
